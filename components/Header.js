@@ -38,6 +38,7 @@ function Header() {
             className="flex-grow w-full focus:outline-none "
             type="text"
             ref={searchInputRef}
+            defaultValue={router.query.term}
           />
           {/*XIvcon Start*/}
           <svg
