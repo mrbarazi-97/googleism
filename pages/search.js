@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import Footer from '../components/Footer.js';
 import SearchResults from '../components/SearchResults.js';
 import { API_KEY, CONTEXT_KEY } from '../keys.js';
 import Header from './../components/Header.js';
 import Response from './../Response';
 
-function search({ results }) {
+export default function search({ results }) {
   const router = useRouter();
   console.log(results);
   return (
@@ -20,12 +19,9 @@ function search({ results }) {
       <Header />
       {/*Result*/}
       <SearchResults results={results} />
-      <Footer />
     </div>
   );
 }
-
-export default search;
 
 export async function getServerSideProps(context) {
   const useDummyData = false;
