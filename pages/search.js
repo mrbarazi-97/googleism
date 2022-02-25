@@ -6,7 +6,7 @@ import { API_KEY, CONTEXT_KEY } from '../keys.js';
 import Header from './../components/Header.js';
 import Response from './../Response';
 
-export default function search({ results }) {
+export default function Search({ results }) {
   const router = useRouter();
   console.log(results);
   return (
