@@ -8,6 +8,7 @@ import Footer from './../components/Footer';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
+import SettingIcon from '../components/SettingIcon';
 
 export default function Home() {
   const router = useRouter();
@@ -31,7 +32,10 @@ export default function Home() {
           <p className="link">Gmail</p>
           <p className="link">Images</p>
           {/*Icon*/}
-          <ViewGridIcon />
+          <div className="flex flex-row">
+            <SettingIcon className="hidden sm:inline-flex" />
+            <ViewGridIcon />
+          </div>
 
           {/*Avatr*/}
           <Avatar url="https://i.pinimg.com/474x/82/ab/35/82ab3533ee71daf256f23c1ccf20ad6f--avatar-maker.jpg" />
